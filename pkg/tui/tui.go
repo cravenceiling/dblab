@@ -207,6 +207,15 @@ func (t *Tui) setupQueries() {
 			return nil
 		case t.bindings.ClearEditor:
 			t.aw.queries.SetText("", true)
+			/*
+				case tcell.KeyBackspace, tcell.KeyDelete, tcell.KeyBackspace2:
+					// let the Textarea handle backspace.
+					return event
+				case t.bindings.Navigation.Right:
+					// switch to the tableMetadata page if designated Navigation Right Key gets pressed.
+					t.app.SetFocus(t.aw.tableMetadata)
+					return nil
+			*/
 		}
 		return event
 	})
